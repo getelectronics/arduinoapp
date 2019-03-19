@@ -1,0 +1,21 @@
+void setup()
+{
+// declare pin 9 to be an output:
+pinMode(9, OUTPUT);
+}
+
+void loop()
+{
+beep(500);
+}
+
+void beep(unsigned char delayMS)
+{
+//write a value between 1 and 254 out
+//delay, switch off and delay again
+analogWrite(9, 220);
+delay(delayMS);
+analogWrite(9, 0);
+delay(delayMS);
+}
+
